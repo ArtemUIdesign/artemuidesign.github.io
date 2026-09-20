@@ -1,0 +1,51 @@
+:root{
+  --bg:#fbfaf7; --panel:#fff; --ink:#1c1a17; --muted:#6b6560; --line:#e6e1d9;
+  --accent:#2a5bd7; --accent-soft:#eef2fd;
+  --radius:14px; --maxw:46rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#14130f; --panel:#1c1a16; --ink:#efece6; --muted:#a29b92; --line:#2d2a24;
+  --accent:#8fb0ff; --accent-soft:#1d2334;
+}}
+:root[data-theme="dark"]{
+  --bg:#14130f; --panel:#1c1a16; --ink:#efece6; --muted:#a29b92; --line:#2d2a24;
+  --accent:#8fb0ff; --accent-soft:#1d2334;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  padding:0 16px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:48px 0 72px}
+header.top{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:34px}
+.eyebrow{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h1{font-size:clamp(28px,6vw,38px);line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+h2{font-size:21px;letter-spacing:-.01em;margin:38px 0 12px;padding-top:18px;border-top:1px solid var(--line)}
+h2:first-of-type{border-top:0;padding-top:0}
+h3{font-size:16px;margin:24px 0 8px}
+p,li{color:var(--ink)}
+p{margin:0 0 14px}
+ul{margin:0 0 14px;padding-left:22px}
+li{margin:0 0 8px}
+a{color:var(--accent)}
+.sub{color:var(--muted);margin:0}
+.meta{color:var(--muted);font-size:14px;margin:0 0 28px}
+.lede{font-size:17px;color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 20px;margin:0 0 14px}
+.card p:last-child{margin-bottom:0}
+.games{list-style:none;padding:0;margin:0}
+.games li{margin:0 0 10px}
+.games a{display:block;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);padding:16px 18px;text-decoration:none;color:var(--ink)}
+.games a:hover{border-color:var(--accent)}
+.games strong{display:block;font-size:17px;margin-bottom:2px}
+.games span{color:var(--muted);font-size:14px}
+nav.pages{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 30px}
+nav.pages a{background:var(--accent-soft);border:1px solid var(--line);border-radius:999px;
+  padding:7px 14px;font-size:14px;text-decoration:none}
+nav.pages a[aria-current]{background:var(--accent);color:#fff;border-color:var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:48px;padding-top:20px;
+  color:var(--muted);font-size:14px}
+footer a{color:var(--muted)}
+.back{display:inline-block;margin:0 0 22px;font-size:14px;text-decoration:none}
